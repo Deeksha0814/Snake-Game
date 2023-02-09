@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Era</title>
+    <style>
+        
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('/img/bg1.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #board{
+            width: 80vmin;
+            height: 80vmin;
+            margin-right: 550px;
+            background: url('/img/bg1.webp');
+            border: 8px solid white;
+            display: grid;
+            grid-template-columns: repeat(20,1fr);
+            grid-template-rows: repeat(20,1fr);
+        }
+
+        .head{
+            background: linear-gradient(rgb(2, 71, 2), green);
+            border-radius: 10px;
+            transform: scale(1.2);
+            border: 0.39vmin solid white;
+        }
+
+        .snake{
+            background: linear-gradient(rgb(2, 105, 2),rgb(38, 128, 38));
+            border-radius: 8px;
+            border: 0.39vmin solid white;
+        }
+
+        .food{
+            background: linear-gradient(rgb(133, 7, 7) , rgb(146, 97, 5));
+            border: 0.39vmin solid white;
+        }
+
+        #scoreCard{
+            position: absolute;
+            font-size: 35px;
+            color: black;
+            font-family: cursive;
+            margin-left: 550px;
+            margin-top: -310px;
+            z-index: 6;
+        }
+
+        h2{
+            position: absolute;
+            font-size: 50px;
+            margin-top: 60px;
+            margin-left: 780px;
+            font-family: cursive;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Snake World</h2>
+    <div class="container">
+        <div id="scoreCard">Score: 0</div>
+        <div id="board"></div>
+    </div>
+
+    <script src="/main.js"></script>
+</body>
+</html>
